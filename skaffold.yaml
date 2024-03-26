@@ -15,4 +15,12 @@ build:
       sync:
         manual:
           - src: "src/**/*.ts"
-            dest: "."
+            dest: .
+    - image: patf3lix/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .
