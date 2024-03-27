@@ -7,8 +7,8 @@ import { currentUserRouter } from "./routes/current-user";
 import { signinRouter } from "./routes/signin";
 import { signoutRouter } from "./routes/signout";
 import { signupRouter } from "./routes/signup";
-import { errorHandler } from "./middlewares/error-handlers";
-import { NotFoundError } from "./errors/not-found-error";
+import { errorHandler } from "@microserviceticket/common";
+import { NotFoundError } from "@microserviceticket/common";
 
 const app = express();
 /*tells express that it's behind a proxy of ingress engine x,

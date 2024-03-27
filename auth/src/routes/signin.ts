@@ -1,9 +1,9 @@
 import express from "express";
 import { body } from "express-validator";
 import { Request, Response } from "express";
-import { validateRequest } from "../middlewares/validate-request";
+import { validateRequest } from "@microserviceticket/common";
 import { User } from "../models/user";
-import { BadRequestError } from "../errors/bad-request-error";
+import { BadRequestError } from "@microserviceticket/common";
 import { Password } from "../services/password";
 import Jwt from "jsonwebtoken";
 
