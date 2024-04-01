@@ -10,6 +10,7 @@ import {
 
 import { createticketsRouter } from "./routes/new";
 import { showTicketRouter } from "./routes/show";
+import { indexTicketRouter } from "./routes";
 
 const app = express();
 /*tells express that it's behind a proxy of ingress engine x,
@@ -28,6 +29,7 @@ app.use(
 app.use(currentUser);
 app.use(createticketsRouter);
 app.use(showTicketRouter);
+app.use(indexTicketRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
