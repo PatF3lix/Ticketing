@@ -9,6 +9,7 @@ import {
 } from "@microserviceticket/common";
 
 import { createticketsRouter } from "./routes/new";
+import { showTicketRouter } from "./routes/show";
 
 const app = express();
 /*tells express that it's behind a proxy of ingress engine x,
@@ -26,6 +27,7 @@ app.use(
 
 app.use(currentUser);
 app.use(createticketsRouter);
+app.use(showTicketRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
