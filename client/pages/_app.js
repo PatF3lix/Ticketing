@@ -15,11 +15,11 @@ AppComponent.getInitialProps = async (appContext) => {
   const client = buildClient(appContext.ctx);
   const { data } = await client.get("/api/users/currentuser");
 
-  // get information for the landing page getInitialProps function.
-  // This will be passd down through props
+  //  get information for the landing page getInitialProps function.
+  //  This will be passd down through props
   let pageProps = {};
   if (appContext.Component.getInitialProps) {
-    pageProps = await appContext.Component.getInitialProps(appContext);
+    pageProps = await appContext.Component.getInitialProps(appContext.ctx);
   }
   return {
     pageProps,
