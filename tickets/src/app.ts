@@ -2,7 +2,13 @@ import express from "express";
 import "express-async-errors";
 import { json } from "body-parser";
 import cookieSession from "cookie-session";
-import { errorHandler, NotFoundError } from "@microserviceticket/common";
+import {
+  errorHandler,
+  NotFoundError,
+  currentUser,
+} from "@microserviceticket/common";
+
+import { createticketsRouter } from "./routes/new";
 
 const app = express();
 /*tells express that it's behind a proxy of ingress engine x,
@@ -17,6 +23,9 @@ app.use(
     secure: process.env.NODE_ENV !== "test",
   })
 );
+
+app.use(currentUser);
+app.use(createticketsRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
