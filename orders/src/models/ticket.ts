@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 interface TicketAttrs {
   title: string;
   price: number;
-  userId: string;
+  //   userId: string;
 }
 
-interface TicketDoc extends mongoose.Document {
+export interface TicketDoc extends mongoose.Document {
   title: string;
   price: number;
-  userId: string;
+  //   userId: string;
 }
 
 interface TicketModel extends mongoose.Model<TicketDoc> {
@@ -25,11 +25,12 @@ const ticketSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: true,
+      min: 0,
     },
-    userId: {
-      type: String,
-      required: true,
-    },
+    //   userId: {
+    //     type: String,
+    //     required: true,
+    //   },
   },
   {
     toJSON: {
