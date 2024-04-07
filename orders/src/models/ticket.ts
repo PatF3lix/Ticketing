@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { Order, OrderStatus } from "./order";
 interface TicketAttrs {
+  id: string;
   title: string;
   price: number;
   //   userId: string;
@@ -45,7 +46,12 @@ const ticketSchema = new mongoose.Schema(
 );
 
 ticketSchema.statics.build = (attrs: TicketAttrs) => {
-  return new Ticket(attrs);
+  return new Ticket({
+    _id: attrs.id,
+    title: attrs.title,
+    price: attrs.price,
+    //   userId: attrs.userId,
+  });
 };
 
 //this is how we add a method directly to the ticekt document itself
