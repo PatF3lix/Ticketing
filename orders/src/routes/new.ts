@@ -49,7 +49,7 @@ router.post(
     const order = new Order({
       userId: req.currentUser!.id,
       status: OrderStatus.Created,
-      expiration,
+      expiresAt: expiration,
       ticket,
     });
     await order.save();
