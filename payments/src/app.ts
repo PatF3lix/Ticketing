@@ -7,6 +7,7 @@ import {
   NotFoundError,
   currentUser,
 } from "@microserviceticket/common";
+import { createChargeRouter } from "./routes/new";
 
 const app = express();
 /*tells express that it's behind a proxy of ingress engine x,
@@ -23,6 +24,7 @@ app.use(
 );
 
 app.use(currentUser);
+app.use(createChargeRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
