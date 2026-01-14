@@ -120,6 +120,20 @@ Testing: Use the appropriate endpoints to test each service independently or int
 │ └── k8s-service.yaml
 └── skaffold.yaml
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Skaffold Configuration
 
 The skaffold.yaml configures how each microservice is built and deployed. It defines:
