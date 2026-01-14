@@ -89,51 +89,6 @@ Service Updates: Skaffold will automatically rebuild and redeploy the affected s
 
 Testing: Use the appropriate endpoints to test each service independently or interactively via the front-end (client service).
 
-## Project Structure
-
-├── auth/
-│ ├── src/
-│ └── Dockerfile
-├── client/
-│ ├── src/
-│ └── Dockerfile
-├── tickets/
-│ ├── src/
-│ └── Dockerfile
-├── orders/
-│ ├── src/
-│ └── Dockerfile
-├── expiration/
-│ ├── src/
-│ └── Dockerfile
-├── payments/
-│ ├── src/
-│ └── Dockerfile
-├── infra/
-│ └── k8s/
-│ ├── auth-deployment.yaml
-│ ├── client-deployment.yaml
-│ ├── tickets-deployment.yaml
-│ ├── orders-deployment.yaml
-│ ├── expiration-deployment.yaml
-│ ├── payments-deployment.yaml
-│ └── k8s-service.yaml
-└── skaffold.yaml
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Skaffold Configuration
 
 The skaffold.yaml configures how each microservice is built and deployed. It defines:
