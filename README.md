@@ -92,32 +92,32 @@ Testing: Use the appropriate endpoints to test each service independently or int
 ## Project Structure
 
 ├── auth/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── client/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── tickets/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── orders/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── expiration/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── payments/
-│   ├── src/
-│   └── Dockerfile
+│ ├── src/
+│ └── Dockerfile
 ├── infra/
-│   └── k8s/
-│       ├── auth-deployment.yaml
-│       ├── client-deployment.yaml
-│       ├── tickets-deployment.yaml
-│       ├── orders-deployment.yaml
-│       ├── expiration-deployment.yaml
-│       ├── payments-deployment.yaml
-│       └── k8s-service.yaml
+│ └── k8s/
+│ ├── auth-deployment.yaml
+│ ├── client-deployment.yaml
+│ ├── tickets-deployment.yaml
+│ ├── orders-deployment.yaml
+│ ├── expiration-deployment.yaml
+│ ├── payments-deployment.yaml
+│ └── k8s-service.yaml
 └── skaffold.yaml
 
 ## Skaffold Configuration
